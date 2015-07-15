@@ -15,7 +15,7 @@
 # == Define: bugdaystats
 #
 define bugdaystats::site(
-  $git_url = '',
+  $git_url = 'https://git.openstack.org/openstack-infra/bugdaystats',
   $configfile = '',
   $httproot = '',
   $serveradmin = ''
@@ -27,16 +27,16 @@ define bugdaystats::site(
   }
 
   file { $httproot:
-    ensure  => directory,
-    owner   => 'bugdaystats',
-    group   => 'bugdaystats',
-    mode    => '0755',
+    ensure => directory,
+    owner  => 'bugdaystats',
+    group  => 'bugdaystats',
+    mode   => '0755',
   }
 
   vcsrepo { '/var/lib/bugdaystats/bugdaystats':
     ensure   => latest,
     provider => git,
-    source   => 'https://git.openstack.org/openstack-infra/bugdaystats',
+    source   => $git_url,
     revision => 'master',
     require  => File['/var/lib/bugdaystats'],
   }
