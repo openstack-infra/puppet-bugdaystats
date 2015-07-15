@@ -15,10 +15,10 @@
 # == Define: bugdaystats
 #
 define bugdaystats::site(
+  $configfile,
+  $httproot,
   $git_url = 'https://git.openstack.org/openstack-infra/bugdaystats',
-  $configfile = '',
-  $httproot = '',
-  $serveradmin = ''
+  $serveradmin = undef
 ) {
   file { $configfile:
     mode    => '0444',
