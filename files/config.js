@@ -13,5 +13,7 @@
         { "project": "tempest" }
     ],
     "openstack_status": 1,
-    "rotation": 3
+    "rotation": 3,
+    "daily": true,
+    "daily_rotation": 183
 }
