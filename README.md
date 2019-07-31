@@ -1,5 +1,3 @@
-# OpenStack Bugdaystats Module
+# This repo has moved to OpenDev
 
-## Overview
-
-Configures Bug Day Stats.
+It can now be found at [https://opendev.org/opendev/puppet-bugdaystats](https://opendev.org/opendev/puppet-bugdaystats)
